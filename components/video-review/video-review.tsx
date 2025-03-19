@@ -21,7 +21,7 @@ export const VideoReview = () => {
   return (
     <Section id="reviews">
       <h2 className="text-[20px] md:text-[26px] font-semibold leading-[140%] text-text-main mb-[50px]">Видео-отзывы</h2>
-      <div className=" relative">
+      <div className=" relative mr-[-20px] xl:mr-0">
         <button
           className="hidden xl:flex absolute top-[50%] left-0 w-[50px] h-[50px] justify-center items-center translate-y-[-50%] z-10 rounded-full bg-text-main opacity-30 cursor-pointer backdrop-blur-[4px] hover:opacity-100 transition-opacity duration-200"
           onClick={handleButtonLeftClick}

@@ -252,7 +252,7 @@ const Tabs = () => {
             </div>
             <div className="flex flex-col gap-[5px]">
               <span className="text-[16px] leading-[140%] text-gray-border ">Что входит</span>
-              <span className="text-[16px] leading-[140%] text-text-main w-[310px]">{cEl.contain}</span>
+              <span className="text-[16px] leading-[140%] text-text-main ">{cEl.contain}</span>
             </div>
             <div className="flex justify-between mt-auto">
               <span className="text-[16px] leading-[140%] text-cl-main bg-bg border-1 border-gray-line w-[109px] flex justify-center py-[8px] rounded-[20px] transition-colors duration-200 group-hover:text-green-main">
@@ -305,7 +305,7 @@ const Tabs = () => {
             slidesPerView={2.6}
             speed={700}
             breakpoints={{ 1280: { slidesPerView: 5, spaceBetween: 20 }, 768: { slidesPerView: 3 } }}
-            className="mr-[-15px]! xl:mr-0"
+            className="mr-[-20px]! **:md:mr-[-15px]! xl:mr-0"
           >
             <div className="flex gap-[10px]">
               {elements.map((el) => (
@@ -332,7 +332,7 @@ const Tabs = () => {
         </div>
         {elements.map((el) => (
           <TabContent key={el.name} active={activeTab === el.name}>
-            <div className="xl:flex flex-col gap-[10px]">
+            <div className="xl:flex flex-col gap-[10px] mr-[-20px] md:mr-0">
               {isMobile ? renderTabContentMobile(el) : renderTabContentDes(el)}
             </div>
           </TabContent>
