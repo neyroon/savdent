@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-text-main: #333333;
+  --color-cl-main: #b89c4c;
+  --color-cl-main-hover: #b19545;
+  --color-tg: #4993d2;
+  --color-vk: #0077ff;
+  --color-icon-bg: #f2f3f7;
+  --color-gray-line: #f8f4f4;
+  --color-bg: #eff1f8;
+  --color-gray-border: #a4a0a0;
+  --color-green-main: #7fce41;
+
+  --breakpoint-l: 88rem;
+}
+
+@utility hamburger-toggle {
+  @apply [&>div]:h-0 [&>div]:bg-white [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
+}

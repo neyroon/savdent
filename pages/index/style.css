@@ -1,0 +1,38 @@
+/* Links */
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #eff1f8;
+  opacity: 0.4;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #b89c4c;
+  opacity: 1;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-horizontal.swiper-pagination-horizontal {
+  left: -120px;
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-pagination-horizontal.swiper-pagination-horizontal.swiper-pagination-horizontal {
+    left: 0;
+  }
+}

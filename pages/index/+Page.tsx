@@ -1,17 +1,27 @@
 import React from "react";
-import { Counter } from "./Counter.js";
+import "./tailwind.css";
+import "./style.css";
+import { Header } from "../../components/header";
+import { Section } from "../../components/section/section";
+import { MainBlock } from "../../components/main-block/main-block";
+import { ServicesBlock } from "../../components/services-block/services-block";
+import { WorkersBlock } from "../../components/workers-block/workers-block";
+import { VideoReview } from "../../components/video-review/video-review";
+import { FormBlock } from "../../components/form-block/form-block";
+import { Footer } from "../../components/footer/footer";
 
 export default function Page() {
   return (
     <>
-      <h1 className={"font-bold text-3xl pb-4"}>My Vike app</h1>
-      This page is:
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
-      </ul>
+      <Header />
+      <main className="pt-[73px]">
+        <MainBlock />
+        <ServicesBlock />
+        <WorkersBlock />
+        <VideoReview />
+        <FormBlock />
+      </main>
+      <Footer />
     </>
   );
 }
