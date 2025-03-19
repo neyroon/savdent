@@ -28,7 +28,7 @@ export const Modal: React.FC<ModalProps> = ({ title, children, isOpen, onClose }
               className="relative w-full max-w-2xl overflow-hidden rounded-[30px] bg-white shadow-2xl dark:bg-gray-800"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="px-[100px] py-[80px]">{children}</div>
+              <div className="px-[40px] md:px-[100px] py-[20px] md:py-[80px]">{children}</div>
             </div>
           </div>
         </div>
