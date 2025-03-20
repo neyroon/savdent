@@ -22,7 +22,7 @@ export const FormPopup = ({ isModalOpen, onClose }: { isModalOpen: boolean; onCl
         <div className=" py-[40px] px-[20px] xl:px-[40px] bg-white w-full rounded-[30px] flex flex-col md:flex-row-reverse gap-[20px]">
           <div className="relative xl:w-[574px] md:w-[329px] h-[251px] xl:h-[451px] md:h-[548px] shrink-0">
             <div
-              className="p-[5px] flex justify-center items-center bg-gray-border rounded-full absolute top-0 right-0 xl:right-[-30px] cursor-pointer text-text-main hover:text-white"
+              className="p-[5px] flex justify-center items-center bg-gray-border rounded-full absolute top-0 right-0  cursor-pointer text-text-main hover:text-white"
               onClick={onClose}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">

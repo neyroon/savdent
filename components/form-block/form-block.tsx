@@ -78,18 +78,20 @@ export const FormBlock = () => {
       </div>
       {isModalOpen && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <p className="mb-[12px] text-text-main text-[20px] md:text-[30px] leading-[140%] font-medium md:font-bold text-center">
-            Заявка успешно отправлена!
-          </p>
-          <p className="mb-[40px] text-text-main text-[14px] md:text-[20px] leading-[140%] font-medium text-center">
-            Перезвоним вам в течении 30 минут
-          </p>
-          <button
-            className="text-[16px] w-full  cursor-pointer text-center font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[15px] px-[30px] rounded-full"
-            onClick={() => setIsModalOpen(false)}
-          >
-            Вернуться обратно
-          </button>
+          <div className="px-[40px] py-[20px] xl:px-[100px] xl:py-[80px]">
+            <p className="mb-[12px] text-text-main text-[20px] md:text-[30px] leading-[140%] font-medium md:font-bold text-center">
+              Заявка успешно отправлена!
+            </p>
+            <p className="mb-[40px] text-text-main text-[14px] md:text-[20px] leading-[140%] font-medium text-center">
+              Перезвоним вам в течении 30 минут
+            </p>
+            <button
+              className="text-[16px] w-full  cursor-pointer text-center font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[15px] px-[30px] rounded-full"
+              onClick={() => setIsModalOpen(false)}
+            >
+              Вернуться обратно
+            </button>
+          </div>
         </Modal>
       )}
     </Section>
