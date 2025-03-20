@@ -3,6 +3,7 @@ import logoImg from "../../assets/logo.png";
 import React, { useEffect, useState } from "react";
 import { TgIcon } from "../icons/tg-icon";
 import { VkIcon } from "../icons/vk-icon";
+import { FormPopup } from "../form-popup/form-popup";
 
 export const Header = () => {
   const navigationItems = [
@@ -13,6 +14,7 @@ export const Header = () => {
     { text: "Контакты", link: "#contacts" },
   ];
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleMenuButtonClick = () => {
     setIsOpen((prev) => !prev);
@@ -73,18 +75,18 @@ export const Header = () => {
                 </a>
               </div>
             </div>
-            <a
-              href="#zapic"
-              className=" md:block hidden text-[16px] font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[15px] px-[30px] rounded-full"
+            <button
+              className=" md:block cursor-pointer hidden text-[16px] font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[15px] px-[30px] rounded-full"
+              onClick={() => setIsModalOpen(true)}
             >
               Записаться на прием
-            </a>
-            <a
-              href="#zapic"
-              className="md:hidden block  text-[14px] font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[11px] px-[10px] rounded-full"
+            </button>
+            <button
+              className="md:hidden block cursor-pointer  text-[14px] font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[11px] px-[10px] rounded-full"
+              onClick={() => setIsModalOpen(true)}
             >
               Записаться
-            </a>
+            </button>
             <div onClick={handleMenuButtonClick} className="grid xl:hidden z-50 place-content-center w-[35px] h-[26px]">
               <div className="w-[35px] h-[2px] bg-[#B89C4C] rounded-full transition-all duration-300 before:content-[''] before:absolute before:w-[35px] before:h-[2px] before:bg-[#B89C4C] before:rounded-full before:-translate-y-[10px] before:transition-all before:duration-300 after:content-[''] after:absolute after:w-[35px] after:h-[2px] after:bg-[#B89C4C] after:rounded-full after:translate-y-[10px] after:transition-all after:duration-300"></div>
             </div>
@@ -145,15 +147,16 @@ export const Header = () => {
                 <VkIcon />
               </a>
             </div>
-            <a
-              href="#zapic"
-              className="text-[16px] w-[222px] font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[15px] px-[30px] rounded-full"
+            <button
+              className="text-[16px] cursor-pointer w-[222px] font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[15px] px-[30px] rounded-full"
+              onClick={() => setIsModalOpen(true)}
             >
               Записаться на прием
-            </a>
+            </button>
           </div>
         </div>
       </aside>
+      {isModalOpen && <FormPopup isModalOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
     </>
   );
 };

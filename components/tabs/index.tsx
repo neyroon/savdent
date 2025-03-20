@@ -3,9 +3,11 @@ import React, { useEffect, useState } from "react";
 import { Tab } from "./tab";
 import { TabContent } from "./tab-content";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FormPopup } from "../form-popup/form-popup";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("popular");
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -258,12 +260,12 @@ const Tabs = () => {
               <span className="text-[16px] leading-[140%] text-cl-main bg-bg border-1 border-gray-line w-[109px] flex justify-center py-[8px] rounded-[20px] transition-colors duration-200 group-hover:text-green-main">
                 {cEl.price}
               </span>
-              <a
-                href="#zapic"
+              <button
                 className="text-[16px] font-medium text-white leading-[140%] transition-colors duration-200 bg-[#7FCE41B2] group-hover:bg-green-main py-[8px] px-[14px] rounded-full"
+                onClick={() => setIsModalOpen(true)}
               >
                 Записаться
-              </a>
+              </button>
             </div>
           </div>
         </SwiperSlide>
@@ -284,12 +286,12 @@ const Tabs = () => {
           <span className="text-[16px] leading-[140%] text-cl-main bg-bg border-1 border-gray-line w-[109px] flex justify-center py-[8px] rounded-[20px] transition-colors duration-200 group-hover:text-green-main">
             {cEl.price}
           </span>
-          <a
-            href="#zapic"
-            className="text-[16px] font-medium text-white leading-[140%] transition-colors duration-200 bg-[#7FCE41B2] group-hover:bg-green-main py-[8px] px-[14px] rounded-full"
+          <button
+            className="text-[16px] cursor-pointer font-medium text-white leading-[140%] transition-colors duration-200 bg-[#7FCE41B2] group-hover:bg-green-main py-[8px] px-[14px] rounded-full"
+            onClick={() => setIsModalOpen(true)}
           >
             Записаться
-          </a>
+          </button>
         </div>
       ))}
     </>
@@ -338,6 +340,7 @@ const Tabs = () => {
           </TabContent>
         ))}
       </div>
+      {isModalOpen && <FormPopup isModalOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
     </>
   );
 };

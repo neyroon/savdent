@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import classNames from "classnames";
+import React, { useEffect, useState } from "react";
 
 interface ModalProps {
   children: React.ReactNode;
@@ -7,31 +8,44 @@ interface ModalProps {
 }
 
 export const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
-  const [showModal, setShowModal] = useState(isOpen);
+  const [showModal, setShowModal] = useState(false);
 
   const handleClose = () => {
     setShowModal(false);
     onClose();
   };
 
+  useEffect(() => {
+    setTimeout(() => setShowModal(true), 0);
+  }, []);
+
+  useEffect(() => {
+    if (showModal) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "visible";
+
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }, [showModal]);
+
   return (
     <>
-      {showModal && (
-        <div className="fixed inset-0 z-50 overflow-y-auto" onClick={handleClose}>
+      <div
+        className={classNames("fixed inset-0 z-50 overflow-y-auto transition-opacity duration-300 opacity-0", {
+          "opacity-100": showModal,
+        })}
+        onClick={handleClose}
+      >
+        <div className="absolute inset-0 bg-gray-600 opacity-60"></div>
+        <div className="flex min-h-full  items-center justify-center " onClick={(e) => e.stopPropagation()}>
           <div
-            className="absolute inset-0 bg-gray-600 opacity-60"
-            // Добавляем затемнение с полупрозрачностью
-          ></div>
-          <div className="flex min-h-screen items-center justify-center px-4 py-4" onClick={(e) => e.stopPropagation()}>
-            <div
-              className="relative w-full max-w-2xl overflow-hidden rounded-[30px] bg-white shadow-2xl dark:bg-gray-800"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="px-[40px] md:px-[100px] py-[20px] md:py-[80px]">{children}</div>
-            </div>
+            className="relative w-fit h-fit max-h-[calc(100vh-100px)] max-w-[calc(100vw-10vw)] overflow-auto rounded-[30px] bg-white shadow-2xl dark:bg-gray-800"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {children}
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 };

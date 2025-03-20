@@ -8,6 +8,7 @@ import img3 from "../../assets/worker3.webp";
 import img4 from "../../assets/worker4.webp";
 import img5 from "../../assets/worker5.webp";
 import { Curve } from "../icons/curve";
+import { FormPopup } from "../form-popup/form-popup";
 
 export const WorkersBlock = () => {
   const elements = [
@@ -18,6 +19,8 @@ export const WorkersBlock = () => {
     { img: img5, name: "Николай", kval: "Стоматолог-ортопед", practise: [] },
     { img: img5, name: "Николай", kval: "Стоматолог-ортопед", practise: [] },
   ];
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const swiperRef = useRef<null | SwiperRef>(null);
 
@@ -72,12 +75,12 @@ export const WorkersBlock = () => {
                     loading="lazy"
                   />
                   {el.withAppointment && (
-                    <a
-                      href="#zapic"
-                      className="absolute right-[20px] top-[20px] text-[16px] font-medium text-cl-main leading-[140%] transition-colors duration-200 bg-white hover:text-text-main py-[8px] px-[20px] rounded-full"
+                    <button
+                      className="absolute cursor-pointer right-[20px] top-[20px] text-[16px] font-medium text-cl-main leading-[140%] transition-colors duration-200 bg-white hover:text-text-main py-[8px] px-[20px] rounded-full"
+                      onClick={() => setIsModalOpen(true)}
                     >
                       Записаться
-                    </a>
+                    </button>
                   )}
                 </div>
                 <div className="flex flex-col gap-[10px]">
@@ -96,6 +99,7 @@ export const WorkersBlock = () => {
           ))}
         </Swiper>
       </div>
+      {isModalOpen && <FormPopup isModalOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
     </Section>
   );
 };
