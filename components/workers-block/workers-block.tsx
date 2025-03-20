@@ -9,6 +9,8 @@ import img4 from "../../assets/worker4.webp";
 import img5 from "../../assets/worker5.webp";
 import { Curve } from "../icons/curve";
 import { FormPopup } from "../form-popup/form-popup";
+import certImg from "../../assets/cert-preview-1.webp";
+import cert1 from "../../assets/pdf/certificate.pdf";
 
 export const WorkersBlock = () => {
   const elements = [
@@ -89,10 +91,18 @@ export const WorkersBlock = () => {
                   <span className="text-[16px] text-[#969FA8] leading-[140%] text-center">Образование и практика:</span>
                 </div>
                 <div className="flex gap-[10px]">
-                  <div className="bg-[#D9D9D9] w-full h-[94px] rounded-[5px]"></div>
-                  <div className="bg-[#D9D9D9] w-full h-[94px] rounded-[5px]"></div>
-                  <div className="bg-[#D9D9D9] w-full h-[94px] rounded-[5px]"></div>
-                  <div className="bg-[#D9D9D9] w-full h-[94px] rounded-[5px]"></div>
+                  <a href={cert1} target="_blank" rel="noreferrer" className="w-full h-[94px] rounded-[5px] block">
+                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover" />
+                  </a>
+                  <a href={cert1} target="_blank" rel="noreferrer" className="w-full h-[94px] rounded-[5px] block">
+                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover" />
+                  </a>
+                  <a href={cert1} target="_blank" rel="noreferrer" className="w-full h-[94px] rounded-[5px] block">
+                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover" />
+                  </a>
+                  <a href={cert1} target="_blank" rel="noreferrer" className="w-full h-[94px] rounded-[5px] block">
+                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover" />
+                  </a>
                 </div>
               </div>
             </SwiperSlide>
