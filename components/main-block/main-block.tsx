@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import elbrusImg from "../../assets/elbrus2.webp";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Section } from "../section/section";
+import { FormPopup } from "../form-popup/form-popup";
 
 export const MainBlock = () => {
   const content = [
@@ -41,6 +42,8 @@ export const MainBlock = () => {
     { title: "Безопасно", text: "гарантируем 1 год" },
   ];
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <Section id="main" className="scroll-mt-[73px]">
       <div className="flex md:flex-row flex-col gap-[30px] md:gap-[20px] ">
@@ -53,12 +56,12 @@ export const MainBlock = () => {
               Устраняем боль, восстанавливаем зубы и возвращаем уверенность в улыбке
             </span>
             <div className="flex flex-col xl:flex-row gap-[15px]">
-              <a
-                href="#zapic"
-                className="text-[16px]  font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[15px] xl:px-[30px] text-center rounded-full"
+              <button
+                className="text-[16px] cursor-pointer font-medium text-white leading-[140%] transition-colors duration-200 bg-cl-main hover:bg-cl-main-hover py-[15px] xl:px-[30px] text-center rounded-full"
+                onClick={() => setIsModalOpen(true)}
               >
                 Записаться на бесплатный прием
-              </a>
+              </button>
               <a
                 href="#price"
                 className="text-[16px] text-center border-gray-border border-1  font-medium text-text-main leading-[140%] transition-colors duration-200 bg-bg hover:bg-cl-main hover:text-white py-[15px] px-[25px] rounded-full"
@@ -88,12 +91,12 @@ export const MainBlock = () => {
                   <span className="text-[16px] text-text-main leading-[140%]">Главный врач</span>
                   <span className="text-[14px] text-gray-border leading-[140%]">Эльбрус Сафарович</span>
                 </div>
-                <a
-                  href="#zapic"
-                  className="absolute cursor-pointer right-[10px] md:right-[30px] bottom-[10px] md:bottom-[17px]  text-[16px] font-medium text-cl-main leading-[140%] transition-colors duration-200 bg-white hover:text-text-main py-[8px] px-[20px] rounded-full"
+                <button
+                  className="absolute cursor-pointer right-[10px] md:right-[30px] bottom-[10px] md:bottom-[17px]  text-[16px] font-medium text-cl-main leading-[140%] transition-colors duration-200 z-50 bg-white hover:text-text-main py-[8px] px-[20px] rounded-full"
+                  onClick={() => setIsModalOpen(true)}
                 >
                   Записаться
-                </a>
+                </button>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -107,12 +110,12 @@ export const MainBlock = () => {
                   <span className="text-[16px] text-text-main leading-[140%]">Главный врач</span>
                   <span className="text-[14px] text-gray-border leading-[140%]">Эльбрус Сафарович</span>
                 </div>
-                <a
-                  href="#zapic"
-                  className="absolute right-[10px] md:right-[30px] bottom-[10px] md:bottom-[30px] text-[16px] font-medium text-cl-main leading-[140%] transition-colors duration-200 bg-white hover:text-text-main py-[8px] px-[20px] rounded-full"
+                <button
+                  className="absolute cursor-pointer right-[10px] md:right-[30px] bottom-[10px] md:bottom-[17px]  text-[16px] font-medium text-cl-main leading-[140%] transition-colors duration-200 bg-white hover:text-text-main py-[8px] px-[20px] rounded-full z-50"
+                  onClick={() => setIsModalOpen(true)}
                 >
                   Записаться
-                </a>
+                </button>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -140,6 +143,7 @@ export const MainBlock = () => {
           ))}
         </Swiper>
       </div>
+      {isModalOpen && <FormPopup isModalOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
     </Section>
   );
 };

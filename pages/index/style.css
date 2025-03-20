@@ -28,7 +28,7 @@ body {
 }
 
 .swiper-pagination-horizontal.swiper-pagination-horizontal.swiper-pagination-horizontal {
-  width: fit-content;
+  width: auto;
   left: 17px;
   height: 15px;
 }
@@ -46,7 +46,7 @@ body {
 
 @media screen and (min-width: 1280px) {
   .swiper-pagination-horizontal.swiper-pagination-horizontal.swiper-pagination-horizontal {
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
