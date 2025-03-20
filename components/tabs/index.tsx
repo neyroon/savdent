@@ -299,13 +299,13 @@ const Tabs = () => {
     <>
       <div className="flex md:flex-row flex-col gap-[20px] md:gap-[50px]">
         <h2 className="text-[20px] md:text-[26px] font-semibold leading-[140%] shrink-0">Предоставляем услуги</h2>
-        <div className="w-full md:w-[calc(100%-332px)]">
+        <div className="w-full md:w-[calc(100%-332px)] tabs">
           <Swiper
             spaceBetween={10}
             slidesPerView={2.6}
             speed={700}
             breakpoints={{ 1280: { slidesPerView: 5, spaceBetween: 20 }, 768: { slidesPerView: 3 } }}
-            className="mr-[-20px]! :md:mr-[-15px]! xl:mr-0"
+            className="mr-[-20px]! :md:mr-[-15px]! xl:mr-0!"
           >
             <div className="flex gap-[10px]">
               {elements.map((el) => (

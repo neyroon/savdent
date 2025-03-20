@@ -40,7 +40,6 @@ export const FormPopup = ({ isModalOpen, onClose }) => {
             <form className="flex flex-col gap-[20px] text-[16px]  leading-[140%] text-text-main">
               <input
                 type="text"
-                name=""
                 className="px-[15px] py-[19px] rounded-[6px] bg-bg placeholder:text-gray-border"
                 placeholder="Введите имя"
                 required
@@ -48,7 +47,6 @@ export const FormPopup = ({ isModalOpen, onClose }) => {
               <input
                 type="tel"
                 ref={inputRef}
-                name=""
                 className="p-[15px] rounded-[6px] bg-bg placeholder:text-gray-border"
                 placeholder="Номер телефона"
               />
