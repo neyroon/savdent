@@ -85,11 +85,7 @@ export const Header = () => {
             >
               Записаться
             </a>
-            <div
-              id="toggleMenu"
-              onClick={handleMenuButtonClick}
-              className="grid xl:hidden z-50 place-content-center w-[35px] h-[26px]"
-            >
+            <div onClick={handleMenuButtonClick} className="grid xl:hidden z-50 place-content-center w-[35px] h-[26px]">
               <div className="w-[35px] h-[2px] bg-[#B89C4C] rounded-full transition-all duration-300 before:content-[''] before:absolute before:w-[35px] before:h-[2px] before:bg-[#B89C4C] before:rounded-full before:-translate-y-[10px] before:transition-all before:duration-300 after:content-[''] after:absolute after:w-[35px] after:h-[2px] after:bg-[#B89C4C] after:rounded-full after:translate-y-[10px] after:transition-all after:duration-300"></div>
             </div>
           </div>
@@ -105,7 +101,6 @@ export const Header = () => {
         )}
       >
         <div
-          id="toggleMenu"
           onClick={handleMenuButtonClick}
           className={classNames(
             "grid xl:hidden z-50 place-content-center w-[35px] h-[26px] absolute top-[20px] right-[20px]",

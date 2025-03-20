@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
 interface ModalProps {
-  title: string;
   children: React.ReactNode;
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const Modal: React.FC<ModalProps> = ({ title, children, isOpen, onClose }) => {
+export const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
   const [showModal, setShowModal] = useState(isOpen);
 
   const handleClose = () => {

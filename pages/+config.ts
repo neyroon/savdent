@@ -8,8 +8,8 @@ export default {
   // https://vike.dev/Layout
 
   // https://vike.dev/head-tags
-  title: "СафДент",
-  description: "Стоматология",
-
+  title: "Стоматология в Саратове без боли и ожиданий — лечим зубы за 1 день!",
+  description: "Устраняем боль, восстанавливаем зубы и возвращаем уверенность в улыбке",
+  lang: "ru",
   extends: vikeReact,
 } satisfies Config;

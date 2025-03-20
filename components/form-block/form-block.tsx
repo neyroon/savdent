@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Section } from "../section/section";
-import zapicImg from "../../assets/zapic.jpeg";
+import zapicImg from "../../assets/zapic.webp";
 import { useMask } from "@react-input/mask";
 import { Modal } from "../modal/modal";
 
@@ -44,7 +44,6 @@ export const FormBlock = () => {
             <input
               type="text"
               name=""
-              id=""
               className="px-[15px] py-[19px] rounded-[6px] bg-bg placeholder:text-gray-border"
               placeholder="Введите имя"
               required
@@ -53,7 +52,6 @@ export const FormBlock = () => {
               type="tel"
               ref={inputRef}
               name=""
-              id=""
               className="p-[15px] rounded-[6px] bg-bg placeholder:text-gray-border"
               placeholder="Номер телефона"
             />

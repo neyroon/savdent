@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Section } from "../section/section";
 import { Swiper, SwiperRef } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
-import img1 from "../../assets/elbrus2.jpeg";
-import img2 from "../../assets/worker2.jpeg";
-import img3 from "../../assets/worker3.jpeg";
-import img4 from "../../assets/worker4.jpeg";
-import img5 from "../../assets/worker5.jpeg";
+import img1 from "../../assets/elbrus2.webp";
+import img2 from "../../assets/worker2.webp";
+import img3 from "../../assets/worker3.webp";
+import img4 from "../../assets/worker4.webp";
+import img5 from "../../assets/worker5.webp";
 import { Curve } from "../icons/curve";
 
 export const WorkersBlock = () => {

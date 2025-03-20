@@ -1,5 +1,5 @@
 import React from "react";
-import elbrusImg from "../../assets/elbrus2.jpeg";
+import elbrusImg from "../../assets/elbrus2.webp";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
@@ -8,9 +8,35 @@ import { Section } from "../section/section";
 
 export const MainBlock = () => {
   const content = [
-    { title: "Без боли", text: "лечим абсолютно безболезненно" },
-    { title: "Нет переплат", text: "прозрачные цены, рассчитаем заранее" },
-    { title: "Нет времени", text: "решим проблему за 1 визит" },
+    {
+      title: "Без боли",
+      text: (
+        <>
+          лечим абсолютно <br />
+          безболезненно
+        </>
+      ),
+    },
+    {
+      title: "Нет переплат",
+      text: (
+        <>
+          прозрачные цены,
+          <br />
+          рассчитаем заранее
+        </>
+      ),
+    },
+    {
+      title: "Нет времени",
+      text: (
+        <>
+          решим проблему
+          <br />
+          за 1 визит
+        </>
+      ),
+    },
     { title: "Стыдитесь улыбки", text: "восстановим за 1 день" },
     { title: "Безопасно", text: "гарантируем 1 год" },
   ];
@@ -21,7 +47,7 @@ export const MainBlock = () => {
         <div className="md:bg-bg md:p-[30px] rounded-[30px] md:h-[562px] flex items-center md:w-[calc(50%-10px)]">
           <div className="flex flex-col gap-[20px]">
             <h1 className="text-[22px] xl:text-[30px] text-text-main font-bold leading-[140%]">
-              Стоматология в Саратове без боли и ожиданий — лечим зубы за 1 день
+              Стоматология в Саратове без боли <br />и ожиданий — лечим зубы за 1 день
             </h1>
             <span className="text-[20px]  text-text-main font-medium leading-[140%]">
               Устраняем боль, восстанавливаем зубы и возвращаем уверенность в улыбке
@@ -34,7 +60,7 @@ export const MainBlock = () => {
                 Записаться на бесплатный прием
               </a>
               <a
-                href="#zapic"
+                href="#price"
                 className="text-[16px] text-center border-gray-border border-1  font-medium text-text-main leading-[140%] transition-colors duration-200 bg-bg hover:bg-cl-main hover:text-white py-[15px] px-[25px] rounded-full"
               >
                 Цены и услуги
@@ -64,7 +90,7 @@ export const MainBlock = () => {
                 </div>
                 <a
                   href="#zapic"
-                  className="absolute right-[10px] md:right-[30px] bottom-[10px] md:bottom-[30px] text-[16px] font-medium text-cl-main leading-[140%] transition-colors duration-200 bg-white hover:text-text-main py-[8px] px-[20px] rounded-full"
+                  className="absolute right-[10px] md:right-[30px] bottom-[10px] md:bottom-[17px]  text-[16px] font-medium text-cl-main leading-[140%] transition-colors duration-200 bg-white hover:text-text-main py-[8px] px-[20px] rounded-full"
                 >
                   Записаться
                 </a>

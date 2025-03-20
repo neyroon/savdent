@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Section } from "../section/section";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Curve } from "../icons/curve";
-import video1 from "../../assets/video-1.png";
+import video1 from "../../assets/video-1.webp";
 import playImg from "../../assets/play.png";
 
 export const VideoReview = () => {
