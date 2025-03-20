@@ -92,16 +92,35 @@ export const WorkersBlock = () => {
                 </div>
                 <div className="flex gap-[10px]">
                   <a href={cert1} target="_blank" rel="noreferrer" className="w-full h-[94px] rounded-[5px] block">
-                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover" />
+                    <img
+                      src={certImg}
+                      alt="Сертификат"
+                      className="w-full h-full object-cover contrast-[0.8] hover:contrast-[0.7] rounded-[5px]"
+                    />
                   </a>
-                  <a href={cert1} target="_blank" rel="noreferrer" className="w-full h-[94px] rounded-[5px] block">
-                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover" />
+                  <a
+                    href={cert1}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full h-[94px] block contrast-[0.8] hover:contrast-[0.7]"
+                  >
+                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover rounded-[5px]" />
                   </a>
-                  <a href={cert1} target="_blank" rel="noreferrer" className="w-full h-[94px] rounded-[5px] block">
-                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover" />
+                  <a
+                    href={cert1}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full h-[94px] block contrast-[0.8] hover:contrast-[0.7]"
+                  >
+                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover rounded-[5px]" />
                   </a>
-                  <a href={cert1} target="_blank" rel="noreferrer" className="w-full h-[94px] rounded-[5px] block">
-                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover" />
+                  <a
+                    href={cert1}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full h-[94px] block contrast-[0.8] hover:contrast-[0.7]"
+                  >
+                    <img src={certImg} alt="Сертификат" className="w-full h-full object-cover rounded-[5px]" />
                   </a>
                 </div>
               </div>
