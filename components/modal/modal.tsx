@@ -39,7 +39,7 @@ export const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
         <div className="absolute inset-0 bg-gray-600 opacity-60"></div>
         <div className="flex min-h-full  items-center justify-center " onClick={(e) => e.stopPropagation()}>
           <div
-            className="relative w-fit h-fit max-h-[calc(100vh-100px)] max-w-[calc(100vw-10vw)] overflow-auto rounded-[30px] bg-white shadow-2xl dark:bg-gray-800"
+            className="relative w-fit h-fit max-h-[calc(100vh-100px)] max-w-[calc(100vw-10vw)] overflow-auto rounded-[30px] bg-white shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {children}
